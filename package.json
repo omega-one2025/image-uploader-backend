@@ -6,8 +6,8 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
+    "lint": "eslint . --config eslint.config.ts --ext .ts",
+    "lint:fix": "eslint . --config eslint.config.ts --ext .ts --fix",
     "format": "prettier --write .",
     "prepare": "husky install"
   },
