@@ -6,18 +6,14 @@ export const get: Operation = (req: Request, res: Response) => {
 };
 
 get.apiDoc = {
-  description: 'Root GET endpoint',
+  description: 'Health Check Endpoint',
+  tags: ['Root'],
   responses: {
     200: {
       description: 'Success',
       content: {
         'application/json': {
-          schema: {
-            type: 'object',
-            properties: {
-              message: { type: 'string' },
-            },
-          },
+          schema: { type: 'string', example: 'Hello from Express + TypeScript + MongoDB Atlas!' },
         },
       },
     },
