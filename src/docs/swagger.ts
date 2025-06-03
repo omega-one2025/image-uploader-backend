@@ -1,10 +1,11 @@
 import { initialize } from 'express-openapi';
+import { OpenAPIV3 } from 'openapi-types';
 import swaggerUi from 'swagger-ui-express';
 import { Express } from 'express';
 import * as path from 'path';
 
-export const initializeSwaggerDoc = (app: Express, port: number | string) => {
-  const apiDoc = {
+export const initializeSwaggerDoc = async (app: Express, port: number | string) => {
+  const apiDoc: OpenAPIV3.Document = {
     openapi: '3.0.0',
     info: {
       title: 'Express + TypeScript + MongoDB Atlas API',
@@ -14,10 +15,11 @@ export const initializeSwaggerDoc = (app: Express, port: number | string) => {
     paths: {},
   };
 
-  initialize({
+  await initialize({
     app,
     apiDoc,
     paths: path.join(__dirname, '../routes'),
+    exposeApiDocs: true,
   });
 
   app.use(

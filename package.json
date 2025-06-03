@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node dist/app.js",
     "lint": "eslint . --config eslint.config.ts --ext .ts",
     "lint:fix": "eslint . --config eslint.config.ts --ext .ts --fix",
     "format": "prettier --write .",
