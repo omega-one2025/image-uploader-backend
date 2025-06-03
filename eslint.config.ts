@@ -9,6 +9,9 @@ dotenv.config();
 
 export default [
   {
+    ignores: ['**/__tests__/**', '**/*.test.ts', '**/*.spec.ts'],
+  },
+  {
     languageOptions: {
       parser: tseslint.parser,
       ecmaVersion: 'latest',
@@ -18,7 +21,6 @@ export default [
         ...globals.es2021,
       },
     },
-    ignores: ['**/__tests__/**', '**/*.test.ts', '**/*.spec.ts'],
   },
   js.configs.recommended,
   {
