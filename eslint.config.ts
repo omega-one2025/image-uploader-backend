@@ -18,6 +18,7 @@ export default [
         ...globals.es2021,
       },
     },
+    ignores: ['**/__tests__/**', '**/*.test.ts', '**/*.spec.ts'],
   },
   js.configs.recommended,
   {
